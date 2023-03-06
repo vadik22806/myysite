@@ -1,0 +1,36 @@
+{% extends 'priem.html' %}
+
+{% block priem5 %}
+
+{% if blogs|length > 0 %}
+    {% for el in blogs %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.text }}</p>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+    </div>
+    {% endfor %}
+{% else %}
+<h3>Нет информации</h3>
+{% endif %}
+
+{% endblock %}
+
+{% block priem10 %}
+
+
+{% if blogs2|length > 0 %}
+    {% for el in blogs2 %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.text }}</p>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+    </div>
+    {% endfor %}
+{% else %}
+<h3>Нет информации</h3>
+{% endif %}
+
+{% endblock %}

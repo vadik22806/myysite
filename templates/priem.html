@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lyceum88</title>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://sun9-68.userapi.com/impg/bjTfE7B2he1Z3hLe006ay8vOW2_y5U22OXqVSQ/WXr7HJdac-8.jpg?size=2560x1707&quality=95&sign=80ce1a904d5664fb512e45f0f811bdda&type=album");
+  min-height: 93%;
+
+}
+
+.bgimg-2 {
+  background-image: url("https://sun9-6.userapi.com/impg/CZbgSv35YCejB6M8FmRsOzw6ZBcYdPqbhusScg/mJm9whdBQxo.jpg?size=2560x1707&quality=96&sign=816548b8d37e0c9343e13ae4c59922e9&type=album");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  position: relative;
+  background: #777;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-item {float: left;}
+.right-item {float: right;}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #b0ddf5;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: rgba(0,0,0,.3);}
+@media (max-width: 830px) {
+.menu-main {
+  padding-top: 90px;
+  text-align: center;
+}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.menu-main li {
+  float: none;
+  display: inline-block;
+}
+.menu-main a {
+  line-height: normal;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+}
+@media (max-width: 630px) {
+.menu-main li {display: block;}
+}
+  </style>
+
+
+</head>
+<body>
+
+
+<nav class="top-menu">
+  <ul class="menu-main">
+     <li class="left-item" ><a href="/">Главная</a></li>
+    <li class="left-item" ><a href="/news">Новости</a></li>
+    <li class="left-item"><a href="/raspisanie">Расписание уроков</a></li>
+    <li class="left-item"><a href="/priems">Прием в 5/10 классы</a></li>
+    <li class="right-item"><a href="/pedsostav">Педагогический состав</a></li>
+    <li class="right-item"><a href="/contacts">Контакты</a></li>
+</ul>
+</nav>
+
+<div class="bgimg-1">
+<div class="caption">
+<span class="border"><font size="6" color= "#AFEEEE">5 класс</font></span>
+</div>
+</div>
+<div style="color:#000000;background-color:white;align:center;padding:50px 80px;text-align: justify;">
+<h3 style="text-align:center;" method="post">{% block priem5 %} {% endblock %}</h3>
+</div>
+
+<div class="bgimg-2">
+<div class="caption">
+<span class="border"><font size="6" color= "#AFEEEE">10 класс</font></span>
+</div>
+</div>
+
+</div>
+<div style="color: #000000;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+<h3 style="text-align:center;">{% block priem10 %} {% endblock %}</h3>
+</div>
+
+
+</body>
+</html>

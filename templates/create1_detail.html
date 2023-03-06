@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройка записи</title>
+    <style>
+   .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+</head>
+<body>
+<h1>Настройка записи 1 {{ blog.id }}</h1>
+
+
+<div class="alert alert-info">
+    <h2>{{ blog.title }}</h2>
+    <div class="alert alert-info">
+        <p>{{ blog.text }}</p>
+        <p>{{ blog.intro }}</p>
+        <p><b>Дата: {{ blog.date.date() }}</b></p>
+        <a href="/create1_detail/{{ blog.id }}/delete" class="btn">Удалить</a>
+        <a href="/create1_detail/{{ blog.id }}/update" class="btn">Редактировать</a>
+    </div>
+</div>
+

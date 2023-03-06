@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lyceum88</title>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("https://sun9-54.userapi.com/impg/j8OIt1R83o4rUEVqK02sxicSyC3g_v2E_u3tIQ/SyeshLSQcBQ.jpg?size=2560x2002&quality=95&sign=842bbef1ad227150dd3b265bb3758a2a&type=album");
+  min-height: 91%;
+
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+  position: relative;
+  background: #777;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left-item {float: left;}
+.right-item {float: right;}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  line-height: 80px;
+  padding: 0 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #b0ddf5;
+  transition: .3s linear;
+}
+.menu-main a:hover {background: rgba(0,0,0,.3);}
+@media (max-width: 830px) {
+.menu-main {
+  padding-top: 90px;
+  text-align: center;
+}
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+.menu-main li {
+  float: none;
+  display: inline-block;
+}
+.menu-main a {
+  line-height: normal;
+  padding: 20px 15px;
+  font-size: 16px;
+}
+}
+@media (max-width: 630px) {
+.menu-main li {display: block;}
+}
+  </style>
+    <style>
+        .grid * {
+    box-sizing: border-box;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 20px 0;
+}
+/* Кол-во блоков на разных экранах */
+@media only screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.grid-item {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+    transition: box-shadow .3s;
+    width: 50%;
+    height: 100%;
+}
+.grid-item .image {
+    height: 450px;
+    overflow: hidden;
+}
+.grid-item .info {
+    position: relative;
+    height: calc(100% - 200px);
+    padding: 16px 14px 80px 14px;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.grid-item .image img  {
+      transition: transform 280ms ease-in-out;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-item:hover .image img  {
+    transform: scale(1.1);
+}
+.info h2 {
+    font-family: 'Roboto', Тahoma, sans-serif;
+    color: #337AB7;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+.info-text p {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+.grid-item .button-wrap {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    text-align: center;
+}
+/* Кнопка подробнее */
+.atuin-btn {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+}
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+    color: #FFF;
+}
+.atuin-btn:after,
+.atuin-btn:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: #337AB7;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.atuin-btn:before {
+    top: -6px;
+}
+.atuin-btn:hover:after,
+.atuin-btn:hover:before,
+.atuin-btn:active:after,
+.atuin-btn:active:before,
+.atuin-btn:focus:after,
+.atuin-btn:focus:before {
+    width: 100%;
+    left: 0;
+}
+
+    </style>
+
+</head>
+<body>
+
+
+<nav class="top-menu">
+  <ul class="menu-main">
+      <li class="left-item" ><a href="/">Главная</a></li>
+    <li class="left-item" ><a href="/news">Новости</a></li>
+    <li class="left-item"><a href="/raspisanie">Расписание уроков</a></li>
+    <li class="left-item"><a href="/priems">Прием в 5/10 классы</a></li>
+    <li class="right-item"><a href="/pedsostav">Педагогический состав</a></li>
+    <li class="right-item"><a href="/contacts">Контакты</a></li>
+</ul>
+</nav>
+
+<div class="bgimg-1">
+<div class="caption">
+<span class="border"><font size="6" color= "#AFEEEE">Новостной блог</font></span>
+</div>
+</div>
+<div style="color: #AFEEEE;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    {% if blogs4|length > 0 %}
+    {% for el in blogs4 %}
+    <div align="center">
+    <article class="grid-item">
+        <div class="image">
+            <img src="{{ el.img }}">
+        </div>
+        <div class="info">
+            <h2>{{ el.title }}</h2>
+            <div class="info-text">
+                <h3>{{ el.intro }}</h3>
+            </div>
+            <div class="button-wrap">
+                <a class="atuin-btn" href="/NEWS/{{ el.id }}">Подробнее</a>
+            </div>
+        </div>
+    </article>
+    </div>
+    {% endfor %}
+{% else %}
+    <h3>Нет информации</h3>
+{% endif %}
+
+    <!-- Еще блоки -->
+</section></h3>
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
+

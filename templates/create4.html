@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание новости</title>
+    <style>
+   .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+</head>
+<body>
+<h1>Создание новости лицей 88</h1>
+<style>
+        .grid * {
+    box-sizing: border-box;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 20px 0;
+}
+/* Кол-во блоков на разных экранах */
+@media only screen and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.grid-item {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+    transition: box-shadow .3s;
+    width: 50%;
+    height: 100%;
+}
+.grid-item .image {
+    height: 450px;
+    overflow: hidden;
+}
+.grid-item .info {
+    position: relative;
+    height: calc(100% - 200px);
+    padding: 16px 14px 80px 14px;
+}
+.grid-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+.grid-item .image img  {
+      transition: transform 280ms ease-in-out;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-item:hover .image img  {
+    transform: scale(1.1);
+}
+.info h2 {
+    font-family: 'Roboto', Тahoma, sans-serif;
+    color: #337AB7;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+.info-text p {
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+.grid-item .button-wrap {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    text-align: center;
+}
+/* Кнопка подробнее */
+.atuin-btn {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
+}
+.atuin-btn:hover,
+.atuin-btn:active,
+.atuin-btn:focus {
+    color: #FFF;
+}
+.atuin-btn:after,
+.atuin-btn:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: #337AB7;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.atuin-btn:before {
+    top: -6px;
+}
+.atuin-btn:hover:after,
+.atuin-btn:hover:before,
+.atuin-btn:active:after,
+.atuin-btn:active:before,
+.atuin-btn:focus:after,
+.atuin-btn:focus:before {
+    width: 100%;
+    left: 0;
+}
+
+    </style>
+
+
+<form method="post">
+    <input type="text" name="title" id="title" class="form-control" placeholder="Введите название"><br>
+    <textarea name="intro" id="intro" class="form-control" placeholder="Введите начало статьи"></textarea><br>
+    <textarea name="text" id="text" class="form-control" placeholder="Введите текст"></textarea><br>
+    <textarea name="img" id="img" class="form-control" placeholder="Введите url картинки"></textarea><br>
+    <input type="submit" class="btn btn-success" value="Отправить">
+    <a href="/login/admin" class="btn">Вернуться</a>
+</form>
+
+
+{% if blogs4|length > 0 %}
+    {% for el in blogs4 %}
+    <div align="center">
+    <article class="grid-item">
+        <div class="image">
+            <img src="{{ el.img }}">
+        </div>
+        <div class="info">
+            <h2>{{ el.title }}</h2>
+            <div class="info-text">
+                <p>{{ el.intro }}</p>
+            </div>
+            <div class="button-wrap">
+                <a class="atuin-btn" href="/NEWS/{{ el.id }}">Подробнее</a>
+            </div>
+        </div>
+        <a href="/create4_detail/{{ el.id }}" class="btn">Настройка записи</a>
+    </article>
+    </div>
+    {% endfor %}
+{% else %}
+    <h1>Нет информации</h1>
+{% endif %}
+
+
+
+
+
+</body>
+</html>

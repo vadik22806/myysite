@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование новости</title>
+    <style>
+   .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+</head>
+<body>
+<h1>Редактирование новости {{ blog4.id }}</h1>
+
+<form method="post">
+    <input type="text" name="title" id="title" class="form-control" placeholder="{{ blog4.title }}"><br>
+    <textarea name="intro" id="intro" class="form-control" placeholder="Введите начало статьи">{{ blog4.intro }}</textarea><br>
+    <textarea name="text" id="text" class="form-control" placeholder="Введите текст">{{ blog4.text }}</textarea><br>
+    <textarea name="img" id="img" class="form-control" placeholder="Введите url картинки"></textarea><br>
+    <input type="submit" class="btn btn-success" value="Редактировать">
+</form>

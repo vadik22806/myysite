@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание записи</title>
+    <style>
+   .btn {
+    display: inline-block; /* Строчно-блочный элемент */
+    background: #8C959D; /* Серый цвет фона */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
+   }
+  </style>
+</head>
+<body>
+<h1>Создание записи 1 лицей 88</h1>
+
+
+
+<form method="post">
+    <input type="text" name="title" id="title" class="form-control" placeholder="Введите название"><br>
+    <textarea name="text" id="text" class="form-control" placeholder="Введите текст"></textarea><br>
+    <textarea name="intro" id="intro" class="form-control" placeholder="Введите график работы"></textarea><br>
+    <input type="submit" class="btn btn-success" value="Отправить">
+    <a href="/login/admin" class="btn">Вернуться</a>
+</form>
+
+
+{% if blogs|length > 0 %}
+    {% for el in blogs %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.text }}</p>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href="/create1_detail/{{ el.id }}" class="btn">Настройка записи</a>
+    </div>
+    {% endfor %}
+{% else %}
+<h1>Нет информации</h1>
+{% endif %}
+
+
+
+</body>
+</html>
